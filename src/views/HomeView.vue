@@ -8,12 +8,10 @@
 <script>
     
     import Quiz from '../components/QuizComponent.vue'
-    import Footer from '../components/FooterComponent.vue'
     export default {
         components :
         {
-            Quiz,
-            Footer
+            Quiz
         }
     }
 </script>

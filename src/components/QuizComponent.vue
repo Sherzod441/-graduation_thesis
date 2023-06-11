@@ -4,15 +4,19 @@
     <div v-if="showScore">
         <b-card 
         title="Results"
-        style="max-width: 20rem;magrin-top:4rem; color:#FF6700;"
+        style="max-width: 20rem;magrin-top:4rem; color:#374050;"
         >
-        Sizning to'g'ri javoblaringiz {{score}} ta  
+       <h3 class="mb-4"> Siz <span class="text-success">{{questions.length}}</span> ta savoldan <span class="text-danger">{{score}}</span> tasiga to'g'ri javob berdingiz</h3> 
+       <h3 v-if="score == 8">Barakalla siz hamma savolga to'g'ri javob berdingiz</h3>
+       <h3 v-else>Xatolaringiz ustida ishlab, yana urinib ko'ring <br> <br>
+        <button @click="Back()" class="main-button"> Darslarga qaytish</button>
+       </h3> 
         </b-card>
     </div>
     <div class="card-q" v-else>
     <span v-if="!startQuiz">
          <card
-         img-src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+         img-src="about.png"
     img-alt="Image"
     img-top
     title="Simple Quiz Application"
@@ -32,24 +36,24 @@
   
   >
    <card-text>
-      Question No.{{currentQuestion + 1}} of {{questions.length}}
+      <h3> Savol {{currentQuestion + 1}} jami savollar soni {{questions.length}} ta </h3>
     </card-text>
     <br>
    <progress
         variant="warning"
         :max="30"
         :value="countDown"
-        height="4px"
+        height="10px"
       ></progress>
   
      <card-text>
-      <span style="font-size: 40px;"><strong>{{countDown}} </strong></span>
+      <span class="ms-4" style="font-size: 25px;"><strong>{{countDown}} </strong></span> <br> <br>
     </card-text>
-    <card-text>
+    <h3 class="mb-3">
       {{questions[currentQuestion].questionText}}
-    </card-text>
+    </h3>
     <div class="answer-section">
-    <button :key="index" v-for="(option, index) in questions[currentQuestion].answerOptions" @click="handleAnswerClick(option.isCorrect)" class="ans-option-btn" variant="primary">{{option.answerText}}</button>
+    <button :key="index" v-for="(option, index) in questions[currentQuestion].answerOptions" @click="handleAnswerClick(option.isCorrect)" class="answer-button  mb-3" variant="primary">{{option.answerText}}</button>
     </div>
   </card>
     </span>
@@ -70,7 +74,7 @@ export default {
 
             questions : [
 		{
-			questionText: "Shu tiplardan qaysi biri o'zgaruvchi butun sonligini bildiradi",
+			questionText: "Shu tiplardan qaysi biri butun sonlar uchun ishlatiladi ?",
 			answerOptions: [
 				{ answerText: 'string', isCorrect: false },
         { answerText: 'float', isCorrect: false },
@@ -81,53 +85,60 @@ export default {
 			],
 		},
 		{
-			questionText: 'Who is the creator of vueJS ?',
+			questionText: "Shu tiplardan qaysi biri haqiqiy sonlar uchun ishlatiladi ?",
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: false },
-				{ answerText: 'Evan You', isCorrect: true },
-				{ answerText: 'Tony Stark', isCorrect: false },
+				{ answerText: 'String', isCorrect: false },
+				{ answerText: 'float', isCorrect: true },
+				{ answerText: 'int', isCorrect: false },
+				{ answerText: 'boolean', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'Vue is used in the backend. - True or False?',
+			questionText: 'boolean faqat True yoki False qiymatga ega ',
 			answerOptions: [
-				{ answerText: 'True', isCorrect: false },
-				{ answerText: 'False', isCorrect: true },
+				{ answerText: 'Rost', isCorrect: true },
+				{ answerText: "Yolg'on", isCorrect: false },
 			],
 		},
 		{
-			questionText: 'Which version of Vue is Launched on 2020?',
+			questionText: 'Shu tiplardan qaysi biri satrlar uchun ishlatiladi ?',
 			answerOptions: [
-				{ answerText: 'Vue 2', isCorrect: false },
-				{ answerText: 'Vue 1', isCorrect: false },
-				{ answerText: 'Vue 4', isCorrect: false },
-				{ answerText: 'Vue 3', isCorrect: true },
+				{ answerText: 'string', isCorrect: true },
+				{ answerText: 'float', isCorrect: false },
+				{ answerText: 'int', isCorrect: false },
+				{ answerText: 'boolean', isCorrect: false },
 			],
         },
         {
-			questionText: 'Is vue an OpenSource Library?',
+			questionText: "String tipi orqali satrni satrga qo'shsa bo'ladi",
 			answerOptions: [
-				{ answerText: 'True', isCorrect: true },
-				{ answerText: 'False', isCorrect: false },
+				{ answerText: 'Rost', isCorrect: true },
+				{ answerText: "Yolg'on", isCorrect: false },
 			],
         },
         {
-			questionText: 'Which of the following is a Full Javascript Frramework',
+			questionText: "String tipi orqali satrni satrga ko'paytirsa bo'ladi",
 			answerOptions: [
-				{ answerText: 'Vue', isCorrect: false },
-				{ answerText: 'node', isCorrect: false },
-				{ answerText: 'react', isCorrect: false },
-				{ answerText: 'Angular', isCorrect: true },
+				{ answerText: 'Rost', isCorrect: true },
+				{ answerText: "Yolg'on", isCorrect: false },
 			],
         },
         {
-			questionText: 'Composition API can be used on which version?',
+			questionText: 'Boolean tiplar bilan amal bajarish uchun quyidagi amallardan foydalaniladi:  ',
 			answerOptions: [
-				{ answerText: 'Vue 5', isCorrect: false },
-				{ answerText: 'Vue 2 Only', isCorrect: false },
-				{ answerText: 'Vue 3 Only', isCorrect: false },
-				{ answerText: 'Both Vue 2 and Vue 3', isCorrect: true },
+				{ answerText: "faqatgina boolean amal bilan ishlashdan", isCorrect: false },
+				{ answerText: "sonlarni bir biriga qo'shish", isCorrect: false },
+				{ answerText: "stringni string ga qo'shish", isCorrect: false },
+				{ answerText: 'Mantiqiy tiplar orasida mantiqiy operatorlar bilan amal bajarish', isCorrect: true },
+			],
+        },
+        {
+			questionText: 'va amalini qod orqali qanday yoziladi ',
+			answerOptions: [
+				{ answerText: '||', isCorrect: false },
+				{ answerText: '&&', isCorrect: true },
+				{ answerText: '!=', isCorrect: false },
+				{ answerText: '< yoki > ', isCorrect: false },
 			],
 		},
     ],
@@ -172,15 +183,13 @@ export default {
                 else{
                     this.handleAnswerClick(false)
                 }
+            },
+            Back(){
+                 this.$router.push('/lessons'); 
             }
     },
-     created() {
-        //  alert(this.$store.state.questionAttended)
-        //    this.showScore = localStorage.getItem('testComplete') || false
-        //    this.currentQuestion = localStorage.getItem('qattended') || 0
-        //    this.countDownTimer()
-        //    this.fetchQuiz()
-        }
+
+
     
 }
 </script>
@@ -195,16 +204,7 @@ export default {
 .card-q{
     min-width: 60%;
 }
-.ans-option-btn{
-    min-width: 50%;
-    font-size: 16px;
-    color: #ffffff;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 5px;
 
-
-}
 .answer-section {
   width: 100%;
   display: flex;
@@ -221,24 +221,7 @@ export default {
   text-align: center;
 }
 
-.card-img, .card-img-top {
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-    height: 350px;
-}
-.ans-option-btn {
-  width: 100%;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #FF6700;
-  border-radius: 15px;
-  display: flex;
-  padding: 5px;
-  justify-content: flex-start;
-  align-items: center;
-  border: 5px solid #FFF;
-  cursor: pointer;
-}
+
 /* --- Buttons --- */
 .main-button {
 position:relative;
@@ -277,5 +260,15 @@ transition:0.2s all;
 .main-button.icon-button:hover:after , .main-button.icon-button:focus:after {
 opacity:1;
 }
-
+.answer-button{
+  position:relative;
+display:inline-block;
+padding:10px 30px;
+background-color: #FF6700;
+border: 2px solid transparent;
+border-radius: 40px;
+color: #FFF;
+-webkit-transition:0.2s all;
+transition:0.2s all;
+}
 </style>
