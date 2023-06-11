@@ -156,12 +156,12 @@
             <!-- row -->
             <div class="row">
               <!-- single blog -->
-              <div class="col-md-6">
+              <div class="col-md-6 col-sm-2">
                 <div class="single-blog">
                   <div class="blog-img">
                     <iframe
-                      width="560"
-                      height="315"
+                      width="100%"
+                      height="100%"
                       src="https://www.youtube.com/embed/TfXfBPO4wug"
                       title="YouTube video player"
                       frameborder="0"
@@ -178,12 +178,12 @@
               <!-- /single blog -->
 
               <!-- single blog -->
-              <div class="col-md-6">
+              <div class="col-md-6 col-sm-2">
                 <div class="single-blog">
                   <div class="blog-img">
                     <iframe
-                      width="560"
-                      height="315"
+                      width="100%"
+                      height="100%"
                       src="https://www.youtube.com/embed/cvbmwI5RBNo"
                       title="YouTube video player"
                       frameborder="0"
@@ -200,12 +200,12 @@
               <!-- /single blog -->
 
               <!-- single blog -->
-              <div class="col-md-6">
+              <div class="col-md-6 col-sm-2">
                 <div class="single-blog">
                   <div class="blog-img">
                     <iframe
-                      width="560"
-                      height="315"
+                      width="100%"
+                      height="100%"
                       src="https://www.youtube.com/embed/d96EvP4F6LU"
                       title="YouTube video player"
                       frameborder="0"
@@ -222,12 +222,12 @@
               <!-- /single blog -->
 
               <!-- single blog -->
-              <div class="col-md-6">
+              <div class="col-md-6 col-sm-2">
                 <div class="single-blog">
                   <div class="blog-img">
                     <iframe
-                      width="560"
-                      height="315"
+                      width="100%"
+                      height="100%"
                       src="https://www.youtube.com/embed/oyd9bGF8Q7E"
                       title="YouTube video player"
                       frameborder="0"
@@ -244,12 +244,12 @@
               <!-- /single blog -->
 
               <!-- single blog -->
-              <div class="col-md-6">
+              <div class="col-md-6 col-sm-2">
                 <div class="single-blog">
                   <div class="blog-img">
                     <iframe
-                      width="560"
-                      height="315"
+                      width="100%"
+                      height="100%"
                       src="https://www.youtube.com/embed/K532yzx94pY"
                       title="YouTube video player"
                       frameborder="0"
@@ -266,12 +266,12 @@
               <!-- /single blog -->
 
               <!-- single blog -->
-              <div class="col-md-6">
+              <div class="col-md-6 col-sm-2">
                 <div class="single-blog">
                   <div class="blog-img">
                     <iframe
-                      width="560"
-                      height="315"
+                      width="100%"
+                      height="100%"
                       src="https://www.youtube.com/embed/evTa5bQ393A"
                       title="YouTube video player"
                       frameborder="0"

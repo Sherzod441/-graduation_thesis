@@ -141,7 +141,7 @@
 
         <!-- row -->
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 texts  col-2 col-sm -4">
             <h3>Hozrgi zamoda dasturlashni hayotimizdagi o'rni haqida qisqacha video</h3>
             <p class="lead">
               Dasturlashning hayotimizdagi o'rni hozirgi zamonda juda katta va o'zgarmoqda. U yuqori samarali, effektiv va innovatsion yondashuvlarni ta'minlaydi va turli sohalarda imkoniyatlar yaratadi.
@@ -151,9 +151,9 @@
             </p>
           </div>
 
-          <div class="col-md-5 col-md-offset-1 ">
+          <div class="col-md-5 col-sm-2 ">
             
-              <iframe width="600" height="315" src="https://www.youtube.com/embed/RUI3alqJuC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="100%" height="100%"  src="https://www.youtube.com/embed/RUI3alqJuC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             
           </div>
         </div>
