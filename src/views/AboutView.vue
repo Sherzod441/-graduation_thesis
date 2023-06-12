@@ -16,7 +16,7 @@
 
             <!-- feature -->
             <div class="feature">
-              <i class="feature-icon fa fa-flask"></i>
+              <i class="feature-icon fa fa-flask mt-4"></i>
               <div class="feature-content">
                 <h4>Onlayn ta'lim</h4>
                 <p>
@@ -28,9 +28,9 @@
 
             <!-- feature -->
             <div class="feature">
-              <i class="feature-icon fa fa-users"></i>
+              <i class="feature-icon fa fa-users mt-2"></i>
               <div class="feature-content">
-                <h4>Ustozlar kerak bo'lmaydi</h4>
+                <h4>Ustoz kerak bo'lmaydi</h4>
                 <p>
                   Bu sayt orqali siz hech qanday ustozlarsiz o'zingizni bilimingizni oshirishingiz mumkin.
                 </p>
@@ -40,7 +40,7 @@
 
             <!-- feature -->
             <div class="feature">
-              <i class="feature-icon fa fa-comments"></i>
+              <i class="feature-icon fa fa-comments mt-3"></i>
               <div class="feature-content">
                 <h4>Mustahkamlash</h4>
                 <p>

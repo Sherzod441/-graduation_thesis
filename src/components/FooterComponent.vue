@@ -15,7 +15,7 @@
         <!-- row -->
         <div id="bottom-footer" class="row">
           <!-- social -->
-          <div class="col-md-6 col-md-push-6">
+          <div class="col-lg-6">
             <ul class="footer-social">
               <li>
                 <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
@@ -31,7 +31,7 @@
           <!-- /social -->
 
           <!-- copyright -->
-          <div class="col-md-6 col-md-pull-4">
+          <div class="col-lg-6 ">
             <div class="footer-copyright">
               <span
                 >&copy; Copyright 2023.
